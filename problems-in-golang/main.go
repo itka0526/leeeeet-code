@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/itka0526/problems-in-golang/simple"
+	"github.com/itka0526/problems-in-golang/seventyfive"
 )
 
 func main() {
@@ -59,5 +59,22 @@ func main() {
 	// simple.TestIsPalindrome()
 	// simple.TestClosetTarget()
 	// simple.TestPivotInteger()
-	simple.TestComplexCapitalizeTitle()
+	// simple.TestComplexCapitalizeTitle()
+
+	// backtracking.TestSubsets()
+	// backtracking.TestCombinationSum()
+	// tree.TestBinaryTreePaths()
+	// backtracking.TestPermute()
+	// backtracking.TestSubsetWithDup()
+	// arraysandhashing.MoveZeroesToEnd()
+	// arraysandhashing.LongestSubsequence()
+	// seventyfive.TestCanPlaceFlowers()
+	// seventyfive.TestReverseVowels()
+	// seventyfive.TestReverseWords()
+	// seventyfive.TestProductExpectSelf()
+	// seventyfive.TestIncreasingTriplet()
+	// seventyfive.TestCompress()
+	// seventyfive.TestFindMaxAverage()
+	// seventyfive.TestMaxVowels()
+	seventyfive.TestLongestOnes()
 }
