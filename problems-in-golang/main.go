@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/itka0526/problems-in-golang/seventyfive"
+	"github.com/itka0526/problems-in-golang/contest"
 )
 
 func main() {
@@ -76,5 +76,21 @@ func main() {
 	// seventyfive.TestCompress()
 	// seventyfive.TestFindMaxAverage()
 	// seventyfive.TestMaxVowels()
-	seventyfive.TestLongestOnes()
+	// seventyfive.TestLongestOnes()
+	// seventyfive.TestLongestSubarray()
+	// seventyfive.TestLargestAltitude()
+	// seventyfive.TestPivotIndex()
+	// slidingwindow.TestContainsNearbyDuplicate()
+	// slidingwindow.TestFindLHS()
+	// arraysandhashing.TestShuffle()
+	// stringproblems.TestLongestCommonPrefix()
+	// simple.TestStrStr()
+	// simple.TestLengthOfLastWord()
+	// linkedlist.TestDeleteDuplicates()
+	// seventyfive.TestFindDifference()
+	// seventyfive.TestUniqueOccurrences()
+	// seventyfive.TestEqualPairs()
+	// seventyfive.TestRemoveStars()
+	// seventyfive.TestAsteroidCollision()
+	contest.TestIntelligentWending()
 }
