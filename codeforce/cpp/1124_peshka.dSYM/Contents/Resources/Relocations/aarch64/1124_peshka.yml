@@ -1,0 +1,16 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     './1124_peshka'
+relocations:
+  - { offsetInCU: 0x9F, offset: 0x9F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DE4, symSize: 0xE0 }
+  - { offsetInCU: 0xEA93, offset: 0xEA93, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x5F1C8, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0xF8CC, offset: 0xF8CC, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x13B, symBinAddr: 0x100003F53, symSize: 0x0 }
+  - { offsetInCU: 0xF8E6, offset: 0xF8E6, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedImEE, symObjAddr: 0x13C, symBinAddr: 0x100003F54, symSize: 0x0 }
+  - { offsetInCU: 0xF900, offset: 0xF900, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIyEE, symObjAddr: 0x13D, symBinAddr: 0x100003F55, symSize: 0x0 }
+  - { offsetInCU: 0xFA2B, offset: 0xFA2B, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIoEE, symObjAddr: 0x13E, symBinAddr: 0x100003F56, symSize: 0x0 }
+  - { offsetInCU: 0xFA8C, offset: 0xFA8C, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_1124_peshka.cpp, symObjAddr: 0x11C, symBinAddr: 0x100003F00, symSize: 0x14 }
+  - { offsetInCU: 0xFAB1, offset: 0xFAB1, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0xE0, symBinAddr: 0x100003EC4, symSize: 0x3C }
+  - { offsetInCU: 0xFAB9, offset: 0xFAB9, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_1124_peshka.cpp, symObjAddr: 0x11C, symBinAddr: 0x100003F00, symSize: 0x14 }
+  - { offsetInCU: 0xFAAD, offset: 0xFAAD, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DE4, symSize: 0xE0 }
+  - { offsetInCU: 0xFAB5, offset: 0xFAB5, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0xE0, symBinAddr: 0x100003EC4, symSize: 0x3C }
+...

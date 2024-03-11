@@ -1,0 +1,16 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     './1217_kontrotseptisya'
+relocations:
+  - { offsetInCU: 0xA8, offset: 0xA8, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C5C, symSize: 0x23C }
+  - { offsetInCU: 0xEA93, offset: 0xEA93, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x5F4F0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0xF8CC, offset: 0xF8CC, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x292, symBinAddr: 0x100003F2A, symSize: 0x0 }
+  - { offsetInCU: 0xF8E6, offset: 0xF8E6, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedImEE, symObjAddr: 0x293, symBinAddr: 0x100003F2B, symSize: 0x0 }
+  - { offsetInCU: 0xF900, offset: 0xF900, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIyEE, symObjAddr: 0x294, symBinAddr: 0x100003F2C, symSize: 0x0 }
+  - { offsetInCU: 0xFA2B, offset: 0xFA2B, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIoEE, symObjAddr: 0x295, symBinAddr: 0x100003F2D, symSize: 0x0 }
+  - { offsetInCU: 0xFA95, offset: 0xFA95, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_1217_kontrotseptisya.cpp, symObjAddr: 0x278, symBinAddr: 0x100003ED4, symSize: 0x14 }
+  - { offsetInCU: 0xFAB1, offset: 0xFAB1, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x23C, symBinAddr: 0x100003E98, symSize: 0x3C }
+  - { offsetInCU: 0xFAB9, offset: 0xFAB9, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_1217_kontrotseptisya.cpp, symObjAddr: 0x278, symBinAddr: 0x100003ED4, symSize: 0x14 }
+  - { offsetInCU: 0xFAAD, offset: 0xFAAD, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C5C, symSize: 0x23C }
+  - { offsetInCU: 0xFAB5, offset: 0xFAB5, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x23C, symBinAddr: 0x100003E98, symSize: 0x3C }
+...

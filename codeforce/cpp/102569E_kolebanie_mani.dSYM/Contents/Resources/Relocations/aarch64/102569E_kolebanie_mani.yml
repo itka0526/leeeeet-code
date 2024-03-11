@@ -1,0 +1,20 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     './102569E_kolebanie_mani'
+relocations:
+  - { offsetInCU: 0xAA, offset: 0xAA, size: 0x8, addend: 0x0, symName: __ZSt3absx, symObjAddr: 0x0, symBinAddr: 0x100003DBC, symSize: 0x1C }
+  - { offsetInCU: 0xB2, offset: 0xB2, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x124, symBinAddr: 0x100003F2C, symSize: 0x0 }
+  - { offsetInCU: 0xBD8, offset: 0xBD8, size: 0x8, addend: 0x0, symName: __ZSt3absx, symObjAddr: 0x0, symBinAddr: 0x100003DBC, symSize: 0x1C }
+  - { offsetInCU: 0xBE0, offset: 0xBE0, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1C, symBinAddr: 0x100003DD8, symSize: 0xB8 }
+  - { offsetInCU: 0xEAB0, offset: 0xEAB0, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x5F408, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0xF8E9, offset: 0xF8E9, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x124, symBinAddr: 0x100003F2C, symSize: 0x0 }
+  - { offsetInCU: 0xF903, offset: 0xF903, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedImEE, symObjAddr: 0x125, symBinAddr: 0x100003F2D, symSize: 0x0 }
+  - { offsetInCU: 0xF91D, offset: 0xF91D, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIyEE, symObjAddr: 0x126, symBinAddr: 0x100003F2E, symSize: 0x0 }
+  - { offsetInCU: 0xFA48, offset: 0xFA48, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIoEE, symObjAddr: 0x127, symBinAddr: 0x100003F2F, symSize: 0x0 }
+  - { offsetInCU: 0xFAB4, offset: 0xFAB4, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_102569E_kolebanie_mani.cpp, symObjAddr: 0x110, symBinAddr: 0x100003ECC, symSize: 0x14 }
+  - { offsetInCU: 0xFABC, offset: 0xFABC, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x124, symBinAddr: 0x100003F2C, symSize: 0x0 }
+  - { offsetInCU: 0xFACE, offset: 0xFACE, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0xD4, symBinAddr: 0x100003E90, symSize: 0x3C }
+  - { offsetInCU: 0xFAD6, offset: 0xFAD6, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_102569E_kolebanie_mani.cpp, symObjAddr: 0x110, symBinAddr: 0x100003ECC, symSize: 0x14 }
+  - { offsetInCU: 0xFACA, offset: 0xFACA, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1C, symBinAddr: 0x100003DD8, symSize: 0xB8 }
+  - { offsetInCU: 0xFAD2, offset: 0xFAD2, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0xD4, symBinAddr: 0x100003E90, symSize: 0x3C }
+...

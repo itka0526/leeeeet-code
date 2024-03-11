@@ -1,0 +1,3 @@
+kogda ispolzovati int64_5 ili int ili long long?
+kak otlichiti hitrogo avtora ot nehitrogo?
+kak umno ispolzovati assert?
