@@ -1,9 +1,5 @@
 package main
 
-import (
-	"github.com/itka0526/problems-in-golang/simple"
-)
-
 func main() {
 	// arraysandhashing.TestContainsDuplicate()
 	// arraysandhashing.TestIsAnagram()
@@ -112,5 +108,7 @@ func main() {
 	// fmt.Print("\n")
 
 	// simple.TestScoreOfString()
-	simple.TestGenerate()
+	// simple.TestGenerate()
+	// simple.TestIslandPerimeter()
+	// simple.TestSummaryRanges()
 }
