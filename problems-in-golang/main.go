@@ -1,5 +1,9 @@
 package main
 
+import (
+	"github.com/itka0526/problems-in-golang/medium"
+)
+
 func main() {
 	// arraysandhashing.TestContainsDuplicate()
 	// arraysandhashing.TestIsAnagram()
@@ -111,4 +115,6 @@ func main() {
 	// simple.TestGenerate()
 	// simple.TestIslandPerimeter()
 	// simple.TestSummaryRanges()
+	// simple.TestFindWordsContaining()
+	medium.TestNumsIslands()
 }
