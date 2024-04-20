@@ -109,7 +109,7 @@ int main() {
     // kolichestvo_nulei();
     // udalenie_tsifr();
     // vstavka_symbolov();
-    // kruglyashi();
+    // kruglyashi();`
 
     paroli();
     return 0;

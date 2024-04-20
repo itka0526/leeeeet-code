@@ -116,5 +116,6 @@ func main() {
 	// simple.TestIslandPerimeter()
 	// simple.TestSummaryRanges()
 	// simple.TestFindWordsContaining()
-	medium.TestNumsIslands()
+	// medium.TestNumsIslands()
+	medium.TestFindFarmLand()
 }
