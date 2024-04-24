@@ -119,5 +119,7 @@ func main() {
 	// medium.TestNumsIslands()
 	// medium.TestFindFarmLand()
 	// simple.TestValidPath()
-	medium.TestOpenLock()
+	// medium.TestOpenLock()
+	// simple.TestPickGifts()
+	medium.TestFindMinHeightTrees()
 }
