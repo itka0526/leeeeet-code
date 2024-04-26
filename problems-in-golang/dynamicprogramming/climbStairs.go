@@ -1,4 +1,4 @@
-package simple
+package dynamicprogramming
 
 import (
 	"fmt"
@@ -25,7 +25,7 @@ func climbStairs2(n int) int {
 	return climbStairs2(n-1) + climbStairs2(n-2)
 }
 
-var mem map[int]int = map[int]int{}
+var mem = map[int]int{}
 
 func climbStairs(n int) int {
 	if n == 1 {
