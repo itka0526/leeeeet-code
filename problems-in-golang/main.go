@@ -1,9 +1,5 @@
 package main
 
-import (
-	"github.com/itka0526/problems-in-golang/medium"
-)
-
 func main() {
 	// arraysandhashing.TestContainsDuplicate()
 	// arraysandhashing.TestIsAnagram()
@@ -121,5 +117,7 @@ func main() {
 	// simple.TestValidPath()
 	// medium.TestOpenLock()
 	// simple.TestPickGifts()
-	medium.TestFindMinHeightTrees()
+	// medium.TestFindMinHeightTrees()
+	// simple.TestLongestIdealString()
+	dynamicprogramming.minCostClimbingStairs()
 }

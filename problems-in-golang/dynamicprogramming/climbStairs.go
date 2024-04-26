@@ -22,7 +22,6 @@ func climbStairs2(n int) int {
 	if n == 2 {
 		return 2
 	}
-
 	return climbStairs2(n-1) + climbStairs2(n-2)
 }
 
@@ -31,11 +30,9 @@ var mem map[int]int = map[int]int{}
 func climbStairs(n int) int {
 	if n == 1 {
 		return 1
-	}
-	if n == 2 {
+	} else if n == 2 {
 		return 2
-	}
-	if val, ok := mem[n]; ok {
+	} else if val, ok := mem[n]; ok {
 		return val
 	}
 	result := climbStairs(n-1) + climbStairs(n-2)
