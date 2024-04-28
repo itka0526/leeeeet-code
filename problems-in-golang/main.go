@@ -1,6 +1,8 @@
 package main
 
-import "github.com/itka0526/problems-in-golang/dynamicprogramming"
+import (
+	"github.com/itka0526/problems-in-golang/dynamicprogramming"
+)
 
 func main() {
 	// arraysandhashing.TestContainsDuplicate()
@@ -122,5 +124,8 @@ func main() {
 	// medium.TestFindMinHeightTrees()
 	// simple.TestLongestIdealString()
 	// dynamicprogramming.TestMinCostClimbingStairs()
-	dynamicprogramming.TestRob()
+	// dynamicprogramming.TestRob()
+	// backtracking.TestCombinationSum2()
+	// backtracking.TestExist()
+	dynamicprogramming.TestClimbStair()
 }

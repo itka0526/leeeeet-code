@@ -1,8 +1,7 @@
 package dynamicprogramming
 
 import (
-	"fmt"
-	"math"
+	"github.com/itka0526/problems-in-golang/functions"
 )
 
 // naive approach
@@ -35,30 +34,23 @@ func rec(nums []int, start int, currSum int, path int, maxSum *int) int {
 }
 
 func rob(nums []int) int {
-	if len(nums) == 2 {
-		return max(nums[0], nums[1])
+	n := len(nums) + 1
+	dp := make([]int, n)
+	dp[0] = 0
+	dp[1] = nums[0]
+	for i := 1; i < n-1; i++ {
+		dp[i+1] = max(nums[i]+dp[i-1], dp[i])
 	}
-	maxSum := math.MinInt
-	rec(nums, 0, 0, 0, &maxSum)
-	return maxSum
-}
-
-func LogAnswer[T any](
-	got T,
-	exp T,
-) {
-	if _, err := fmt.Println("Answer: ", got, "; Exp: ", exp); err != nil {
-		panic("Cannot log this!")
-	}
+	return dp[len(dp)-1]
 }
 
 func TestRob() {
 	s := []int{2, 7, 9, 3, 1}
-	LogAnswer(rob(s), 12)
+	functions.LogAnswer(rob(s), 12)
 
 	s1 := []int{2, 1, 1, 2}
-	LogAnswer(rob(s1), 4)
+	functions.LogAnswer(rob(s1), 4)
 
 	s2 := []int{1, 3, 1}
-	LogAnswer(rob(s2), 3)
+	functions.LogAnswer(rob(s2), 3)
 }

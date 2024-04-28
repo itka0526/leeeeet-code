@@ -27,7 +27,7 @@ func climbStairs2(n int) int {
 
 var mem = map[int]int{}
 
-func climbStairs(n int) int {
+func climbStairsRecursive(n int) int {
 	if n == 1 {
 		return 1
 	} else if n == 2 {
@@ -35,11 +35,22 @@ func climbStairs(n int) int {
 	} else if val, ok := mem[n]; ok {
 		return val
 	}
-	result := climbStairs(n-1) + climbStairs(n-2)
+	result := climbStairsRecursive(n-1) + climbStairsRecursive(n-2)
 	mem[n] = result
 	return result
 }
 
+func climbStairs(n int) int {
+	dp := make([]int, n+1)
+	dp[n] = 1
+	dp[n-1] = 1
+	for i := n - 2; i >= 0; i-- {
+		dp[i] = dp[i+1] + dp[i+2]
+	}
+	return dp[0]
+}
+
 func TestClimbStair() {
 	fmt.Println("Possibilities: ", climbStairs(4))
+	fmt.Println("Possibilities: ", climbStairs(5))
 }
