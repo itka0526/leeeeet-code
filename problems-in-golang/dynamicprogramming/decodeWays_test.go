@@ -2,7 +2,7 @@ package dynamicprogramming
 
 import "testing"
 
-func Test_numDecodings(t *testing.T) {
+func TestNumDecodings(t *testing.T) {
 	type args struct {
 		s string
 	}
