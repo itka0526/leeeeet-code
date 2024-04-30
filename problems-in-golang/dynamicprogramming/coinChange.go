@@ -55,7 +55,7 @@ func coinChange(a []int, k int) int {
 		b[i] = k + 1
 	}
 	b[0] = 0
-	for i := 1; i < len(b); i++ {
+	for i := 1; i < k+1; i++ {
 		for _, c := range a {
 			if i >= c {
 				b[i] = min(b[i], 1+b[i-c])
