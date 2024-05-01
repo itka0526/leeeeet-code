@@ -1,9 +1,5 @@
 package main
 
-import (
-	"github.com/itka0526/problems-in-golang/dynamicprogramming"
-)
-
 func main() {
 	// arraysandhashing.TestContainsDuplicate()
 	// arraysandhashing.TestIsAnagram()
@@ -127,5 +123,5 @@ func main() {
 	// dynamicprogramming.TestRob()
 	// backtracking.TestCombinationSum2()
 	// backtracking.TestExist()
-	dynamicprogramming.TestClimbStair()
+	// dynamicprogramming.TestClimbStair()
 }
