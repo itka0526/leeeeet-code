@@ -3,8 +3,8 @@
         {
             "type": "cppbuild",
             "label": "Custom Task",
-            "command": "/usr/bin/g++",
-            "args": ["-fdiagnostics-color=always", "-g", "${file}", "-o", "${fileBasenameNoExtension}"],
+            "command": "/opt/homebrew/bin/g++-13",
+            "args": ["-ld_classic", "-fdiagnostics-color=always", "-g", "${file}", "-o", "${fileBasenameNoExtension}", "-gdwarf-4"],
             "options": {
                 "cwd": "${fileDirname}"
             },
