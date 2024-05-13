@@ -115,7 +115,8 @@
         "ciso646": "cpp",
         "__availability": "cpp",
         "filesystem": "cpp",
-        "__hash_table": "cpp"
+        "__hash_table": "cpp",
+        "version": "cpp"
     },
     "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13"
 }
