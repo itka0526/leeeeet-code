@@ -35,10 +35,13 @@ class Solution
             q.pop_front();
             q.pop_back();
 
+            // If both are null
             if (!f && !b)
                 continue;
+            // If one of them is null
             if (!f || !b)
                 return false;
+            // If the values do not match
             if (f->val != b->val)
                 return false;
 
