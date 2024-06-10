@@ -111,7 +111,7 @@ class Solution
         q.push(node);
         while (!q.empty())
         {
-            Node *curr = q.front();
+            const Node *curr = q.front();
             q.pop();
             if (gen.count(curr->val))
             {
