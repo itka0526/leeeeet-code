@@ -1,5 +1,8 @@
-
-X X X X 
-X X X X 
-X X X X 
-X X X O 
+Can finish: 
+0
+Can finish: 
+1: 
+2: 
+3: 
+4: 
+1
