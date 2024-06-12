@@ -33,7 +33,7 @@ class Solution
         }
 
         const vector<vector<int>> &dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-        // Each tick?
+        // Each tick?                   
         while (remaining > 0 && !q.empty())
         {
             int l = q.size();
