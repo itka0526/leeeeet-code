@@ -55,7 +55,7 @@ class Solution
         return true;
     }
 
-    bool dfs(int i, map<int, set<int>> &m, set<int> &vis)
+    bool dfs2(int i, map<int, set<int>> &m, set<int> &vis)
     {
         if (vis.count(i))
         {
@@ -68,7 +68,7 @@ class Solution
         vis.insert(i);
         for (int j : m[i])
         {
-            if (!dfs(j, m, vis))
+            if (!dfs2(j, m, vis))
             {
                 return false;
             }
@@ -78,7 +78,7 @@ class Solution
         return true;
     }
 
-    bool canFinish(int numCourses, vector<vector<int>> &prerequisites)
+    bool canFinish2(int numCourses, vector<vector<int>> &prerequisites)
     {
         map<int, set<int>> m;
         set<int> vis;
@@ -93,7 +93,7 @@ class Solution
 
         for (pair<int, set<int>> p : m)
         {
-            if (!dfs(p.first, m, vis))
+            if (!dfs2(p.first, m, vis))
             {
                 return false;
             };
@@ -109,6 +109,95 @@ class Solution
             cout << "\n";
         }
 
+        return true;
+    }
+
+    bool dfs(int i, map<int, set<int>> &m, set<int> &v)
+    {
+        if (v.count(i))
+            return false;
+        if (m[i].empty())
+            return true;
+        v.insert(i);
+        for (int j : m[i])
+        {
+            if (!dfs(j, m, v))
+            {
+                return false;
+            }
+        }
+        v.erase(i);
+        m[i].clear();
+        return true;
+    }
+
+    bool canFinish(int numCourses, vector<vector<int>> &prerequisites)
+    {
+        map<int, set<int>> m;
+        for (const vector<int> &p : prerequisites)
+        {
+            int i = p[0], j = p[1];
+            if (!m.count(j))
+                m[j] = {};
+            m[i].insert(j);
+        }
+        set<int> vis;
+        for (pair<int, set<int>> p : m)
+        {
+            if (!dfs(p.first, m, vis))
+            {
+                return false;
+            }
+        }
+        for (auto p : m)
+        {
+            cout << p.first << ": ";
+            for (auto g : p.second)
+            {
+                cout << g << " ";
+            }
+            cout << "\n";
+        }
+        return true;
+    }
+
+    bool dfs4(int i, map<int, set<int>> &m, set<int> &v)
+    {
+        if (v.count(i))
+            return false;
+        if (m[i].empty())
+            return true;
+        v.insert(i);
+        for (int j : m[i])
+        {
+            if (!dfs(j, m, v))
+            {
+                return false;
+            }
+        }
+        v.erase(i);
+        m[i].clear();
+        return true;
+    }
+
+    bool canFinish4(int numCourses, vector<vector<int>> &prerequisites)
+    {
+        map<int, set<int>> m;
+        for (vector<int> p : prerequisites)
+        {
+            int i = p[0], j = p[1];
+            if (!m.count(j))
+                m[j] = {};
+            m[i].insert(j);
+        }
+        set<int> v;
+        for (pair<int, set<int>> p : m)
+        {
+            if (!dfs4(p.first, m, v))
+            {
+                return false;
+            }
+        }
         return true;
     }
 };
