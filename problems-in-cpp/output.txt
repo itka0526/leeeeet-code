@@ -1,18 +1,7 @@
-bag: bat dag sag 
-bat: bag cat 
-cat: bat 
-dag: bag sag 
-sag: bag dag 
-
-
-cog: dog log 
-dog: cog dot log 
-dot: dog hot lot 
-hit: hot 
-hot: dot hit lot 
-log: cog dog lot 
-lot: dot hot log 
-
-ANSWER: 4
-ANSWER 1: 0
-ANSWER 2: 5
+YES
+YES
+NO
+NO
+YES
+YES
+NO
