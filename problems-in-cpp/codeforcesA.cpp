@@ -160,6 +160,92 @@ void followingDirections()
     NO;
 }
 
+void mediumNumber()
+{
+    vector<int> a(3);
+    for (int &n : a)
+        cin >> n;
+    sort(a.begin(), a.end());
+    cout << a[1] << nl;
+}
+
+void sum()
+{
+    int a[3];
+    for (int &b : a)
+        cin >> b;
+    sort(a, a + 3);
+    a[0] + a[1] == a[2] ? YES : NO;
+}
+
+void spellCheck()
+{
+    int n;
+    string name;
+    cin >> n >> name;
+    set<char> s1 = {'T', 'i', 'm', 'u', 'r'};
+    if (n != 5)
+    {
+        NO;
+        return;
+    }
+    set<char> s2(name.begin(), name.end());
+    s1 == s2 ? YES : NO;
+}
+
+void yesOrYes()
+{
+    string s;
+    cin >> s;
+    for (char &ch : s)
+        ch = tolower(ch);
+    s == "yes" ? YES : NO;
+}
+
+void marathon()
+{
+    int a;
+    cin >> a;
+    int ans = 0;
+    for (int i = 0, tmp; i < 3; i++)
+    {
+        cin >> tmp;
+        if (tmp > a)
+            ++ans;
+    }
+    cout << ans << nl;
+}
+
+void lucky()
+{
+    string s;
+    cin >> s;
+    int(s[0] + s[1] + s[2]) == int(s[3] + s[4] + s[5]) ? YES : NO;
+}
+
+void division()
+{
+    int p;
+    cin >> p;
+    cout << "Division ";
+    if (p >= 1900)
+        cout << 1;
+    else if (p >= 1600)
+        cout << 2;
+    else if (p >= 1400)
+        cout << 3;
+    else
+        cout << 4;
+    cout << nl;
+}
+
+void oddOneOut()
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+    cout << ((a xor b) xor c) << nl;
+}
+
 int main()
 {
     int t;
@@ -174,7 +260,15 @@ int main()
         // loveStory();
         // plusOrMinus();
         // codeforcesChecking();
-        followingDirections();
+        // followingDirections();
+        // mediumNumber();
+        // sum();
+        // spellCheck();
+        // yesOrYes();
+        // marathon();
+        // lucky();
+        // division();
+        oddOneOut();
     }
     return 0;
 }

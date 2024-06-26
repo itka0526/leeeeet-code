@@ -5,15 +5,15 @@ import os
 
 
 class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+    HEADER = "\033[95m"
+    OKBLUE = "\033[94m"
+    OKCYAN = "\033[96m"
+    OKGREEN = "\033[92m"
+    WARNING = "\033[93m"
+    FAIL = "\033[91m"
+    ENDC = "\033[0m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
 
 
 signals = {
@@ -58,8 +58,7 @@ def main():
     basename_no_ext = sys.argv[1].removesuffix(".cpp")
     print(basename, basename_no_ext)
     if not os.path.isfile(basename):
-        print(bcolors.FAIL + "No such a file exists: ",
-              bcolors.UNDERLINE + basename)
+        print(bcolors.FAIL + "No such a file exists: ", bcolors.UNDERLINE + basename)
         return
     i = open("./input.txt", "+r")
     o = open("./output.txt", "+w")
@@ -69,13 +68,11 @@ def main():
     else:
         print(bcolors.FAIL + "Failed to compile. ")
         return
-    proc = subprocess.Popen("./" + basename_no_ext, stdin=i,
-                            stdout=o, stderr=subprocess.STDOUT, shell=True)
+    proc = subprocess.Popen("./" + basename_no_ext, stdin=i, stdout=o, stderr=subprocess.STDOUT, shell=True)
     proc.communicate()
     if proc.returncode != 0:
         err = signals[abs(proc.returncode)].split("    ")
-        o.write(f"'{basename_no_ext}'" +
-                " got: " + err[0] + f" ({err[1]})")
+        o.write(f"'{basename_no_ext}'" + " got: " + err[0] + f" ({err[1]})")
     i.close()
     o.close()
 
