@@ -151,15 +151,104 @@ void coinGames()
     cntU % 2 ? YES : NO;
 }
 
+void paintingTheRibbon()
+{
+    int n, m, k;
+    cin >> n >> m >> k;
+    ((n + m - 1) / m) >= (n - k) ? NO : YES;
+}
+
+void dualTrigger()
+{
+    int n;
+    string s;
+    cin >> n >> s;
+    int cnt = count(s.begin(), s.end(), '1');
+    // Just logical thinking required. If the number of 1's are odd then its impossible.
+    // And if there are only 2 ones and if they are next to each other then its also impossible.
+    (cnt % 2) || (cnt == 2 && s.find("11") != string::npos) ? NO : YES;
+}
+
+void fireWorks()
+{
+    ll a, b, m;
+    cin >> a >> b >> m;
+    cout << m / a + m / b + 2 << nl;
+}
+
+void rudolfAndTheUglyString()
+{
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    int r = 0, cnt = 0;
+    while (r < n)
+    {
+        if (s[r] == 'm')
+        {
+            if (r + 5 <= n && s.substr(r, 5) == "mapie")
+            {
+                cnt += 1;
+                r += 5;
+                continue;
+            }
+            else if (r + 3 <= n && s.substr(r, 3) == "map")
+            {
+                cnt += 1;
+                r += 3;
+                continue;
+            }
+        }
+        else if (s[r] == 'p')
+        {
+            if (r + 3 <= n && s.substr(r, 3) == "pie")
+            {
+                cnt += 1;
+                r += 3;
+                continue;
+            }
+        }
+        r++;
+    }
+    cout << cnt << nl;
+}
+
+void followingTheString()
+{
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int &item : a)
+        cin >> item;
+    unordered_map<int, int> b(26);
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < 26; j++)
+        {
+            if (b[j] == a[i])
+            {
+                b[j]++;
+                cout << char(97 + j);
+                break;
+            }
+        }
+    }
+    cout << nl;
+}
+
+void solve()
+{
+    followingTheString();
+}
+
 int main()
 {
     int t;
     cin >> t;
     while (t--)
     {
-        // manhattanCircle();
-        // chessForThree();
-        coinGames();
+        solve();
     }
     return 0;
 }
