@@ -309,9 +309,88 @@ void unnaturalLanguageProcessing()
     cout << ans << nl;
 }
 
+void forkedBang()
+{
+    int a, b, kx, ky, qx, qy;
+    cin >> a >> b >> kx >> ky >> qx >> qy;
+    vector<pair<int, int>> dirs = {{-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+    set<pair<int, int>> coords1, coords2;
+    for (int i = 0; i < 4; i++)
+    {
+        // King's
+        coords1.insert({kx + a * dirs[i].first, ky + b * dirs[i].second});
+        coords1.insert({kx + b * dirs[i].first, ky + a * dirs[i].second});
+        // Queen's
+        coords2.insert({qx + a * dirs[i].first, qy + b * dirs[i].second});
+        coords2.insert({qx + b * dirs[i].first, qy + a * dirs[i].second});
+    }
+    cout << count_if(coords1.begin(), coords1.end(), [&](const pair<int, int> &coord) { return coords2.count(coord); })
+         << nl;
+}
+
+void lauraAndOperations()
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+    cout << ((b + c) % 2 == 0) << " " << ((a + c) % 2 == 0) << " " << ((a + b) % 2 == 0) << nl;
+}
+
+void chemistry()
+{
+    int n, k;
+    string s;
+    cin >> n >> k >> s;
+    unordered_map<char, int> m;
+    for (const char &ch : s)
+        m[ch]++;
+    for (pair<char, int> p : m)
+    {
+        if (p.second % 2 == 1 && k > 0)
+        {
+            k--;
+            m[p.first]--;
+        }
+    }
+    int odd = 0;
+    for (pair<char, int> p : m)
+    {
+        if (p.second % 2 == 1)
+        {
+            odd += 1;
+        }
+    }
+    odd > 1 ? NO : YES;
+}
+
+void abFlipping()
+{
+    int n, ops = 0;
+    string s;
+    cin >> n >> s;
+    int p1, p2;
+    p1 = p2 = 0;
+    while (s[p1] == 'B')
+        ++p1, ++p2;
+    while (p1 < n)
+    {
+        int cntB = 0;
+        while (s[p2] == 'A')
+            ++p2;
+        while (s[p2] == 'B')
+            ++p2, ++cntB;
+        if (s[p2 - 1] == 'B')
+            ops += p2 - p1 - 1;
+        if (cntB)
+            p1 = p2 - 1;
+        else
+            break;
+    }
+    cout << ops << nl;
+}
+
 void solve()
 {
-    unnaturalLanguageProcessing();
+    abFlipping();
 }
 
 int main()
