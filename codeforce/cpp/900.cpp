@@ -237,9 +237,81 @@ void followingTheString()
     cout << nl;
 }
 
+void sendingMessages()
+{
+    ll n, f, a, b, p, c;
+    cin >> n >> f >> a >> b;
+    p = c = 0;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> c;
+        f -= min(a * (c - p), b);
+        p = c;
+    }
+    f > 0 ? YES : NO;
+}
+
+void minimizeInversion()
+{
+    int n;
+    cin >> n;
+    vector<pair<int, int>> ab(n);
+    for (auto &p : ab)
+        cin >> p.first;
+    for (auto &p : ab)
+        cin >> p.second;
+    sort(ab.begin(), ab.end());
+    for (auto p : ab)
+        cout << p.first << " ";
+    cout << nl;
+    for (auto p : ab)
+        cout << p.second << " ";
+    cout << nl;
+}
+
+bool isVow(char ch)
+{
+    return ch == 'a' || ch == 'e';
+}
+
+bool isCons(char ch)
+{
+    return ch == 'b' || ch == 'c' || ch == 'd';
+}
+
+void unnaturalLanguageProcessing()
+{
+    // a, e - v
+    // b, c, d - c
+    // cons. vow. - CV
+    // cons. vow. cons - CVC
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    string ans;
+    for (int i = 0; i < n; i++)
+    {
+        if (i + 1 < n && isCons(s[i]) && isVow(s[i + 1]))
+        {
+            if (i + 2 < n && isCons(s[i + 2]) && ((i + 3 < n && !isVow(s[i + 3])) || i + 3 >= n))
+            {
+                ans += s.substr(i, 3) + '.';
+            }
+            else
+            {
+                ans += s.substr(i, 2) + '.';
+            }
+        }
+    }
+    if (ans.size() > 0)
+        ans.pop_back();
+    cout << ans << nl;
+}
+
 void solve()
 {
-    followingTheString();
+    unnaturalLanguageProcessing();
 }
 
 int main()
