@@ -388,9 +388,46 @@ void abFlipping()
     cout << ops << nl;
 }
 
+void threeThreadlets()
+{
+    int abc[3];
+    cin >> abc[0] >> abc[1] >> abc[2];
+    sort(abc, abc + 3);
+    int a = abc[0], b = abc[1], c = abc[2];
+    if (a == b && b == c)
+        YES;
+    else if (b % a == 0 && c % a == 0 && (b / a - 1) + (c / a - 1) <= 3)
+        YES;
+    else
+        NO;
+}
+
+void chipsOnTheBoard()
+{
+    int n;
+    cin >> n;
+    ll sA, sB, mA, mB;
+    sA = sB = 0;
+    mA = mB = INT64_MAX;
+    // Either fill a single row or a single column then calculate minimum.
+    for (ll i = 0, t; i < n; i++)
+    {
+        cin >> t;
+        sA += t;
+        mA = min(mA, t);
+    }
+    for (ll i = 0, t; i < n; i++)
+    {
+        cin >> t;
+        sB += t;
+        mB = min(mB, t);
+    }
+    cout << min(mA * n + sB, mB * n + sA) << nl;
+}
+
 void solve()
 {
-    abFlipping();
+    chipsOnTheBoard();
 }
 
 int main()
